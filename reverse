@@ -1,4 +1,3 @@
-
 @       IN      SOA     smkbisa.com. root.smkbisa.com. (
                               1         ; Serial
                          604800         ; Refresh
@@ -7,4 +6,4 @@
                          604800 )       ; Negative Cache TTL
 ;
 @       IN      NS      smkbisa.com.
-56      IN      PTR     smkbisa.com.
+220      IN      PTR     smkbisa.com.
