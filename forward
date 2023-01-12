@@ -1,0 +1,10 @@
+@       IN      SOA     smkbisa.com. root.smkbisa.com. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      smkbisa.com.
+@       IN      A       192.168.125.56
+@       IN      AAAA    ::1

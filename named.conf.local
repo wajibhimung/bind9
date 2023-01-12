@@ -1,0 +1,12 @@
+#Ubah sesuai domain anda
+zone "smkbisa.com" {
+        type master;
+        file "/etc/bind/forward";
+};
+
+#sesuaikan dengan ip anda 
+zone "125.168.192.in-addr.arpa" {
+        type master;
+        notify no;
+        file "/etc/bind/reverse";
+};
