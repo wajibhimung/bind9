@@ -5,7 +5,7 @@ zone "smkbisa.com" {
 };
 
 #sesuaikan dengan ip anda 
-zone "41.168.192.in-addr.arpa" {
+zone "229.168.192.in-addr.arpa" {
         type master;
         notify no;
         file "/etc/bind/reverse";

@@ -38,7 +38,7 @@ sudo cp forward /etc/bind/forward
 sudo cp reverse /etc/bind/reverse
 
 #Menambahkan name server sesuaiakan ip server
-echo nameserver 192.168.125.56 > /etc/resolv.conf
+echo nameserver 192.168.229.220 > /etc/resolv.conf
 
 #Konfigurasi firewall
 sudo ufw allow 53/tcp
