@@ -31,6 +31,13 @@ sudo rm /etc/bind/named.conf.local
 #Menyalin named.conf.local yang telah kita sesuaikan
 sudo cp named.conf.local /etc/bind/named.conf.local
 
+#Backup named.conf.option
+sudo cp /etc/bind/named.conf.options /etc/bind/named.conf.options.bkp
+#Hapus named.conf.options 
+sudo rm /etc/bind/named.conf.options 
+#Menyalin named.conf.options  yang telah kita sesuaikan
+sudo cp named.conf.options  /etc/bind/named.conf.options
+
 #Menyalin file forward
 sudo cp forward /etc/bind/forward
 
@@ -38,12 +45,15 @@ sudo cp forward /etc/bind/forward
 sudo cp reverse /etc/bind/reverse
 
 #Menambahkan name server sesuaiakan ip server
-echo nameserver 192.168.229.220 > /etc/resolv.conf
+echo nameserver 192.168.25.220 > /etc/resolv.conf
 
 #Konfigurasi firewall
 sudo ufw allow 53/tcp
 sudo ufw enable
 sudo ufw reload
+
+sudo iptables -I INPUT 1 -p tcp -m tcp --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -I INPUT 2 -p udp -m udp --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 #Restart bind
 sudo systemctl restart bind9.service

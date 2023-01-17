@@ -6,5 +6,5 @@
                          604800 )       ; Negative Cache TTL
 ;
 @       IN      NS      smkbisa.com.
-@       IN      A       192.168.229.220
+@       IN      A       192.168.25.220
 @       IN      AAAA    ::1
